@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int SecondSmallest(vector<int> &a, int n){
+int Smallest = a[0];
+int SSmallest = INT_MAX;
+for(int i = 0; i < n; i++){
+    if(a[i] < Smallest){
+        SSmallest = Smallest;
+        Smallest = a[i];
+
+    }
+    else if (a[i] != Smallest && a[i] < SSmallest){
+        SSmallest = a[i];
+    }
+    
+}
+return SSmallest;
+}
+int main()
+{
+int n ;
+cin>> n;
+vector<int> a(n);
+for(int i = 0; i < n; i++){
+    cin>> a[i];
+}
+
+cout<< SecondSmallest(a, n) << endl;
+return 0;
+}

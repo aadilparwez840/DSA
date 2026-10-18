@@ -1,0 +1,28 @@
+#include<iostream>
+using namespace std;
+int FindMaxConsicuitiveOne(vector<int> &num){
+    int maxi = 0;
+    int cnt = 0;
+    for(int i = 0; i < num.size(); i++){
+        if(num[i] == 1){
+          cnt++;
+          maxi = max(maxi,cnt);
+        }
+        else{
+            cnt = 0;
+        }
+    }
+    return maxi;
+}
+int main()
+{
+int n ;
+cin>>n;
+vector<int> num(n);
+for(int i = 0; i < n; i++){
+    cin>> num[i];
+}
+
+cout<< FindMaxConsicuitiveOne(num) << endl;
+return 0;
+}

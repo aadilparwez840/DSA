@@ -1,0 +1,37 @@
+// if number of neg is equal to number of positive
+
+#include<iostream>
+using namespace std;
+vector<int> RearrangeArray(vector<int> &num){
+    int n = num.size();
+    vector<int> ans(n, 0);
+    int posIndex = 0, negIndex = 1;
+    for(int i = 0; i < n; i++){
+        if(num[i] < 0){
+            ans[negIndex] = num[i];
+            negIndex += 2;
+        }
+        else{
+            ans[posIndex] = num[i];
+            posIndex += 2;
+        }
+    }
+    return ans;
+}
+int main()
+{
+    int n;
+    cin >> n;
+    vector<int> num(n);
+    for(int i = 0; i < n; i++){
+        cin >> num[i];
+    }
+    vector<int> ans = RearrangeArray(num);
+     cout << "Rearranged array: ";
+    for (int i = 0; i < n; i++) {
+        cout << ans[i] << " ";
+    }
+
+
+return 0;
+}

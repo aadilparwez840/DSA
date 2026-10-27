@@ -1,0 +1,6 @@
+void array1(int i, int arr[], int n){
+    
+    if(i >= n/2) return ;
+    swap(arr[i], arr[n-i-1]);
+    array1(i+1,arr,n);
+}

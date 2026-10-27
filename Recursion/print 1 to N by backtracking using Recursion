@@ -1,0 +1,6 @@
+void backn(int i,int n){
+if(i<1) return;
+backn(i-1,n);
+cout << i << endl;
+
+}

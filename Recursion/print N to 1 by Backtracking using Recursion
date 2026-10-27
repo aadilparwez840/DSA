@@ -1,0 +1,6 @@
+void backrev(int i,int n){
+if(i>n) return;
+backrev(i+1,n);
+cout << i << endl;
+
+}

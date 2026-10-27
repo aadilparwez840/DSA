@@ -1,0 +1,10 @@
+void sumn(int i, int sum){
+
+    if (i<1) {
+        cout << sum << endl;
+        return;
+    }
+    sumn(i-1,sum+i);
+    
+    
+}

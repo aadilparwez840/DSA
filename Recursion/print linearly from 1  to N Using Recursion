@@ -1,0 +1,7 @@
+void num(int n){
+    int cnt = 1;
+    if(cnt > n) return;
+    cout<< cnt << endl;
+    cnt++;
+    num(n);
+}

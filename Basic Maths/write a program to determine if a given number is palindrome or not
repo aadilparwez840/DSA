@@ -1,0 +1,29 @@
+/* 
+write a program to determine if a given number is palindrome or not 
+print true if it is palindrome , false otherwise 
+*/
+void palindrome(int n) {
+    int dub = n;
+    int rev = 0;
+    while(n>0) {
+        int digit = n%10;
+        rev = rev*10 + digit;
+        n = n/10;
+    }
+   if(rev == dub){
+    cout<<"yes this is palindrome number";
+   }
+   else{
+    cout<<"no it is not palindrome number";
+   }
+}
+int main() {
+    int n;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    palindrome(n);
+
+    return 0;
+}

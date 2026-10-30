@@ -1,0 +1,23 @@
+// write a programto generate the reverse of a number N. Prints the corresponding reverse number.
+// if a number has trailing zeros then its reverse will not have leading zeros. For example, the reverse of 10400 is 401.
+
+void reverse(int n) {
+    
+    int rev = 0;
+    while(n>0) {
+        int digit = n%10;
+        rev = rev*10 + digit;
+        n = n/10;
+    }
+    cout << "Reverse of the number is: " << rev << endl;
+}
+int main() {
+    int n;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    reverse(n);
+
+    return 0;
+}

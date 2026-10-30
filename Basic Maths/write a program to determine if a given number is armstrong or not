@@ -1,0 +1,38 @@
+/* write a program to determine if a given number is armstrong or not 
+print true if it is armstrong , false otherwise */
+
+void Armstrong(int n) {
+    int dub = n;
+    int sum = 0;
+    int count = 0;
+    int temp = n;
+
+    while(temp > 0) {
+        count++;
+        temp = temp / 10;
+    }
+
+    while(n > 0) {
+        int ld = n % 10;
+
+        n = n / 10;
+        sum = sum + pow(ld, count);
+    }
+
+    if(sum == dub) {
+        cout << "yes this is armstrong number";
+    }
+    else {
+        cout << "no it is not armstrong number";
+    }
+}
+int main() {
+    int n;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    Armstrong(n);
+
+    return 0;
+}

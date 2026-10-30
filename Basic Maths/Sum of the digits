@@ -1,0 +1,19 @@
+// sum of the digits
+void digit(int n){
+    int count = 0;
+    while(n>0) {
+        count++;
+        n = n/10;
+    }
+    cout << "Number of digits in " << n << " is: " << count << endl;
+}
+int main() {
+    int n;
+
+    cout << "Enter a number: ";
+    cin >> n;
+
+    digit(n);
+
+    return 0;
+}
